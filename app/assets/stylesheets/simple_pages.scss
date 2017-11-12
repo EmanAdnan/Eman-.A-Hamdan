@@ -7,3 +7,70 @@
 	color:red;
 }
 
+.index h1 {
+	text-align: center;
+	font-size: 3em;
+	font-weight: 900;
+	text-transform: uppercase;
+	 background-color: #fffeea;
+	 border: 5px solid black;
+	 color: red;
+	 }
+.time{
+	margib-left:50%;
+}	 
+
+
+.about{
+	font-size: 10px;
+}
+
+.header h1 {
+	text-align: center;
+	font-size: 3em;
+	font-weight: 900;
+	text-transform: uppercase;
+	 background-color: #fffeea;
+	 border: 5px solid black;
+	 color: red;
+  
+}
+
+.moreabout p{
+	font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+.moreabout {
+	clear: both; 
+
+}
+.skill{
+	
+	background-color: #5AD4C2;
+	color: #FFF;
+}
+.image h1{
+	text-transform: uppercase;
+	font-weight: 700;
+
+}
+
+.content h4 {
+  font-size: 50px;
+  text-align: center;
+  color: red;
+ }
+ .jumbotron{
+    background-image: url("1234.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    padding: 100px;
+    padding-top: 50px;
+    height: 100%;
+}
+ @media screen and (max-width: 767px) {
+    h2 {
+        font-size: 0.8em;
+    }
+}
