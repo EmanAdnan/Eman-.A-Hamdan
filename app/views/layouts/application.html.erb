@@ -5,6 +5,7 @@
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -45,9 +46,14 @@
 
 
 <%= yield %>
-<br><br>
-<footer class="fot">
-  &copy; By: Eman Adnan Hamdan 2017
-</footer>
-  </body>
+
+   <footer class="site-footer">
+        Copyright &copy; 2017 Eman Adnan
+      <ul class="list-inline social-media pull-right">
+          <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+          <li><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
+          <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
+      </ul>
+      
+    </footer>  </body>
 </html>
