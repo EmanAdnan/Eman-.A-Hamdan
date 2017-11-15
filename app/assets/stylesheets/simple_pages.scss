@@ -74,11 +74,7 @@ color:black
   
   }
  
-  .fot{
-  text-align: center;
-  font-size:20px
-  }
-
+ 
   .store h2{                                                               
   font-family: 'Della Respira';
     color: #c55f1f;
@@ -86,7 +82,8 @@ color:black
     padding: 30px 0 20px;
     }
 
-    .site-footer {
+//footer
+.site-footer {
     color: #730E15;
     background-color: #e7e7e7;
     padding: 20px 15px;
@@ -97,8 +94,10 @@ color:black
     -webkit-transition: color .5s;
             transition: color .5s;
 
+    padding: -30px 10px;
 }
 
 .site-footer .fa:hover {
     color: #730e15b3;
 }
+
