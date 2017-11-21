@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
   
-  root 'simple_pages#landing_page'
+  root 'simple_pages#index'
+
+
+  get 'simple_pages/', to: 'simple_pages#index' 
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/landing_page'
