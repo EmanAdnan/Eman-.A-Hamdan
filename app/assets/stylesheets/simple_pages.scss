@@ -189,3 +189,17 @@ color:black
 }
 
 
+/* Thumbnail */
+
+.thumbnail .caption h3 {
+    font-family: Itim;
+    margin-bottom: 25px;
+    font-weight: 600;
+
+}
+
+.thumbnail a>img,
+.thumbnail>img {
+    height: 250px;
+    min-width: 100%;
+} 

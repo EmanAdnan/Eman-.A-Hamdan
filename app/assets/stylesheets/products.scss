@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	margin: 0;
+	margin-top:10px;
 }
 
 .form-label {
@@ -23,4 +23,7 @@ body {
 
 .show-product {
 	margin: 80px auto;
+}
+.show-product .product-img {
+    height: auto;
 }

@@ -32,20 +32,22 @@
                 </button>
                 <a class="navbar-brand" href="/simple_pages/index">EMOO FASHION</a> <!--end projectName -->
             </div> <!--end navbar-header -->
-            <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                     <div class="navbar-collapse collapse">
+                <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form navbar-right') do |form| %>
                     <div class="form-group">
-                        <input id="q" class="form-control" type="text" name="q" />
+                        <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control' %>
                     </div>
-                    <input type="submit" name="commit" value="Search" class="btn btn-primary" data-disable-with="Search" />
-</form>               
+                    <%= submit_tag("Search", class: "btn btn-primary") %>
+                <% end %>               
  <ul class="nav navbar-nav navbar-right">
                     <li><a href="/simple_pages/landing_page">landing_page</a></li> 
                     <li><a href="/products">Products</a></li>
                     <li><a href="/simple_pages/about">About</a></li>
                     <li><a href="/simple_pages/contact">Contact</a></li>
                 </ul>
-            </div> <!-- end navbar-collaps -->
+            </div> <!-- end navbar-collaps -->   
+          </div> <!--end navbar-header -->
+
         </div> <!-- end nav container-->
     </nav>
 
