@@ -76,7 +76,7 @@ color:black
 
 //footer ..................
 .site-footer {
-    color: #730E15;
+    color: #7D053F;
     background-color: #e7e7e7;
     padding: 20px 15px;
 }
@@ -88,7 +88,7 @@ color:black
 }
 
 .site-footer .fa:hover {
-    color: #730e15b3;
+    color: #7D053F;
 }
 
 // Carousel ..............
@@ -203,3 +203,28 @@ color:black
     height: 250px;
     min-width: 100%;
 } 
+
+// contact Us
+.contact {
+    font-family: Spirax, sans-serif;
+    color: #7D053F;
+    text-align: center;
+    padding: 40px 0 20px;
+}
+.contact_button{
+  background-color: #7D053F;
+    border-color: #7D053F;   
+}
+.form-group{
+    color: #7D053F
+}
+
+// thank you page
+.panel-body p{
+    background:#d3d3d3;
+    height: 90px;
+  text-align: center;
+  padding-top: 30px;
+  font-size:25px
+  
+}
