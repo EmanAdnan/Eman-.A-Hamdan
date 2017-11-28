@@ -85,13 +85,3 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 end
 
-ActionMailer::Base.smtp_settings = {
-:address => "smtp.gmail.com",
-:port => 587,
-:authentication => :plain, 
-:enable_starttls_auto => true,
-
-:user_name => 'emanadnan279@gmail.com',
-:password => 'eman109109',
-domain: 'heroku.com'
-}
