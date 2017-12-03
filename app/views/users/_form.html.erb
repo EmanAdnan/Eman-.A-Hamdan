@@ -21,6 +21,10 @@
     <%= form.label :last_name %>
     <%= form.text_field :last_name, id: :user_last_name %>
   </div>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email, autofocus: true %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
