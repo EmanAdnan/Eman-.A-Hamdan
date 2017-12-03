@@ -44,12 +44,42 @@
                     <li><a href="/products">Products</a></li>
                     <li><a href="/simple_pages/about">About</a></li>
                     <li><a href="/simple_pages/contact">Contact</a></li>
+                    <li><a href="/users">Users</a></li>
+
+                    
+            <li class="deviselink">
+              <% if user_signed_in? %>
+                <%= link_to 'Edit', edit_user_registration_path %>
+              <% else %>
+                <%= link_to('Sign up', new_user_registration_path) %>
+              <% end %>
+            </li>
+
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+              <% end %>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
                 </ul>
             </div> <!-- end navbar-collaps -->   
           </div> <!--end navbar-header -->
 
         </div> <!-- end nav container-->
     </nav>
+
+       <% if notice %>
+      <div id="notice" class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div id="alert" class="alert alert-danger"><%= alert %></div>
+    <% end %>
 
 
 
