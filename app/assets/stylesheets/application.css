@@ -76,10 +76,10 @@
 
 // sign up
 .signup{
- width: 200px;
+ width: 400px;
   margin: 16px auto;
   font-size: 16px;
-  text-align: center;
+ 
 }  
 .signup-header {
   background: #FF6666;
@@ -119,3 +119,40 @@
   border-color: #05a;
 }
 
+.password{
+ width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+ 
+}
+
+.password-header {
+  
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  margin: auto;
+}
+
+.password-container {
+  background: #fffeea;
+  width: 100%;
+}
+
+.password input[type="submit"] {
+  background: #FF6666;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.password input[type="submit"]:hover {
+  background: #FF9966;
+}
+
+/* Buttons' focus effect */
+.password input[type="submit"]:focus {
+  border-color: #05a;
+}
