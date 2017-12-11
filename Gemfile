@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+ gem 'ratyrate'
 
 gem 'coffee-script-source', '1.8.0'
 
@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem 'cancancan', '~> 1.10'
+
+gem 'ratyrate'

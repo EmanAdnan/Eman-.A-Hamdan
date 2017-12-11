@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery3
-//= require_tree .
+//= require cable
+//= require site
+//= require jquery.raty
+//= require ratyrate
+
+
