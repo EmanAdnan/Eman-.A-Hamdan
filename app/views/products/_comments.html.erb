@@ -13,4 +13,8 @@
             <p><%= comment.body %></p>
         </div>
     <% end %>
+
+     <div class="digg_pagination">
+    <%= will_paginate @comments %>
+  </div>
 </div>

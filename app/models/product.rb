@@ -2,6 +2,8 @@ class Product < ApplicationRecord
 	has_many :orders
 	has_many :comments
 
+  validates :name, :description, :image_url, :colour, :price, presence: true
+
 
 	def self.search(search_term)
     	search_term.strip! #Returns a copy of str with leading and trailing whitespace removed.
