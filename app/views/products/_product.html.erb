@@ -6,7 +6,12 @@
         <p><%= product.colour%></p>
         <p><%= product.description%></p>
         <strong><%= number_to_currency((product.price), unit: "$") %></strong>
-        <p class="actions" ><%= link_to 'Show', product %> <%= link_to 'Edit', edit_product_path(product) %> <%= link_to 'Destroy', product, method: :delete, data:{ confirm: 'Are you sure?' } %>
+        <p class="actions" ><%= link_to 'Show', product %>  
+
+            <% if signed_in? && current_user.admin? %>
+                <%= link_to 'Edit', edit_product_path(product) %>
+                <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product, method: :delete, data: { confirm: 'Are you sure?' } %>  <% end %>
+
          </p>
       </div>
     </div>

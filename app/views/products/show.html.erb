@@ -10,7 +10,11 @@
        <p> Average Rating: 
         <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
        </p>
-        <p class="actions" ><%= link_to 'Edit', edit_product_path(@product) %> <%= link_to 'Back', products_path %>
+        <p class="actions" > <%= link_to 'Back', products_path %>
+
+          <% if signed_in? && current_user.admin? %>
+                <%= link_to 'Edit', edit_product_path %> 
+                <%end%>
          </p>
          <%= render 'new_comment' %>
          <%= render 'comments' %>
