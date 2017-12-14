@@ -119,6 +119,7 @@
   border-color: #05a;
 }
 
+// password
 .password{
  width: 400px;
   margin: 16px auto;
@@ -154,5 +155,51 @@
 
 /* Buttons' focus effect */
 .password input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+// Edit
+.edit{
+ width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+ 
+}
+
+.edit-header {
+  background: #FF6666;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin: auto;
+}
+
+.edit-container {
+  background: #fffeea;
+  padding: 12px;
+}
+
+
+.edit.field {
+  padding: 8px;
+  text-align: center;
+}
+
+.edit input[type="submit"] {
+  background: #FF6666;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.edit input[type="submit"]:hover {
+  background: #FF9966;
+}
+
+/* Buttons' focus effect */
+.edit input[type="submit"]:focus {
   border-color: #05a;
 }
