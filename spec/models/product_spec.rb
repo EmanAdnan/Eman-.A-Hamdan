@@ -4,7 +4,9 @@ describe Product do
   context "when the product has comments" do
 
   before do
-    @product = Product.create!(name: "shoes", image_url: "123.jpg", description: "nice", colour: "violet" ,price:20.0)
+     @user = FactoryBot.create(:user)
+      @product = FactoryBot.create(:product)
+    @product = Product.create!(name: "shoes", description: "nice",price:20.0, colour: "violet" , image_url: "123.jpg")
     @user = User.create!(first_name: "Wafaa", last_name: "Adnan", email: "Wafaa@gmail.com", password: "123456")
       @product.comments.create!(rating: 1, user: @user, body: "WOOOW")
       @product.comments.create!(rating: 2, user: @user, body: "Just looks to geeky to me?")
