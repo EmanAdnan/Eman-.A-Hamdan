@@ -4,7 +4,7 @@ describe UsersController do
 
   before do
     @user = FactoryBot.create(:user)
-    @user2 = FactoryBot.create(:user)
+    @user2 = FactoryBot.create(:admin)
   end
 
   describe 'GET #show' do
