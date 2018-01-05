@@ -1,34 +1,34 @@
 class OrdersController < ApplicationController
-   before_action :authenticate_user!
+  before_action :authenticate_user!
   def index
-     @orders = Order.includes(:product , :user).where(user_id: current_user.id).all
+    @orders = Order.includes(:product, :user).where(user_id: current_user.id).all
   end
 
   def show
-    @orders = Order.find(params[:id])
+    @order = Order.find(params[:id])
   end
 
-  def new
+  def new;
   end
 
-  def create
+  def create;
     @product = Product.find(params[:product_id])
     @order = @product.orders.build(product: @product)
     @order.user = current_user
     @order.total = @product.price
     if @order.save
       redirect_to order_path(@order)
+      flash[:notice] = "Order made successfully!"
     else
       flash[:error] = "Something went wrong!"
-    end   
-
+    end
   end
 
-  def destroy
+  def destroy;
   end
 
   private
-  def product_params
-    params.require(:order).permit(:user_id , :total)
+  def order_params
+    params.require(:order).permit(:user_id, :total)
   end
 end
