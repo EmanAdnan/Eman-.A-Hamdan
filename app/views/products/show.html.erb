@@ -1,6 +1,8 @@
 
 <div class="container show-product">
-    <div class="thumbnail">
+  <div class="col-sm-4"></div>
+    <div class="thumbnail col-sm-4">
+
       <%= 
           if (@product.image_url != nil)
           image_tag(@product.image_url, class: "img-responsive product img-zoom", height: '350', width: '350', data_zoom_images:@product.image_url) 
