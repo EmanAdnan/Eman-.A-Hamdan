@@ -86,15 +86,14 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 end
 
+config.cache_store = :dalli_store
 
 # Memecachier - Dalli
-  require 'dalli'
-  config.cache_store = :dalli_store,
-                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-                    {:username => ENV["MEMCACHIER_USERNAME"],
-                     :password => ENV["MEMCACHIER_PASSWORD"],
-                     :failover => true,
-                     :socket_timeout => 1.5,
-                     :socket_failure_delay => 0.2,
-                     :down_retry_delay => 60
-                    }
+ (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+{:username => ENV["MEMCACHIER_USERNAME"],
+  :password => ENV["MEMCACHIER_PASSWORD"],
+  :failover => true,
+  :socket_timeout => 1.5,
+  :socket_failure_delay => 0.2,
+  :down_retry_delay => 60
+}
