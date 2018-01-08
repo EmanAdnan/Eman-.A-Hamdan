@@ -99,4 +99,7 @@ Rails.application.configure do
                       :down_retry_delay => 60
                       }
 
- end                     
+  config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+                      
+
+ end

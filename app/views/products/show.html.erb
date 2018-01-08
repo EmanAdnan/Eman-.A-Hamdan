@@ -6,7 +6,14 @@
           if (@product.image_url != nil)
           image_tag(@product.image_url, class: "img-responsive product img-zoom", height: '350', width: '350', data_zoom_images:@product.image_url) 
           end %>
+
       <div class="caption">
+               <h6>  
+  Views:
+  <span class="badge">
+    <%= @product.views %>
+  </span>
+</h6> 
         <% cache @product do %>
         <h3><%= @product.name%></h3>
         <p><%= @product.colour%></p>
