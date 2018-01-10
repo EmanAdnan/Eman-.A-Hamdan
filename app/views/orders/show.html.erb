@@ -4,7 +4,7 @@
     <%= @order.id %>:
     <%= link_to @order.product.name, @order.product %>
   </h1>
-  <%= image_tag(@order.product.image_url, class: "img-product") %>
+  <%= image_tag(@order.product.image_url, class: "img-responsive") %>
   <p>
     <strong>description:</strong>
     <%= @order.product.description %>
