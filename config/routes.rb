@@ -20,7 +20,8 @@ end
   post 'simple_pages/thank_you'
    get 'users/index'
 
-  
+  mount ActionCable.server => '/cable'
+
  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -2,19 +2,20 @@
     <div class="thumbnail">
        <a class="product-image" href="/products/<%= product.id%>"><%= image_tag product.image_url, class: "img-responsive", alt: product.description%></a>
       <div class="caption">
-        <% cache product do %>
+        
         <h3><%= product.name%></h3>
         <p><%= product.colour%></p>
         <p><%= product.description%></p>
         <strong><%= number_to_currency((product.price), unit: "$") %></strong>
-        <p class="actions" ><%= link_to 'Show', product %>  
+        <p class="actions" >
+          <%= link_to 'Show', product %>  
 
             <% if signed_in? && current_user.admin? %>
                 <%= link_to 'Edit', edit_product_path(product) %>
                 <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product, method: :delete, data: { confirm: 'Are you sure?' } %>  <% end %>
 
          </p>
-         <% end %>
+         
       </div>
     </div>
   </div>
