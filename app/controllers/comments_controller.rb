@@ -19,6 +19,7 @@ def create
   end
 
   def destroy
+    authorize! :destroy,  @comment
     @comment = Comment.find(params[:id])
     product = @comment.product
     @comment.destroy
