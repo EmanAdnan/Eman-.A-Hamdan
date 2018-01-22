@@ -9,10 +9,5 @@ class Comment < ApplicationRecord
 after_create_commit {CommentUpdateJob.perform_later(self, self.user)}
   scope :rating_desc, -> { order(rating: :desc) }
   scope :rating_asc, -> { order(rating: :asc) }
-  private
-
-  def comment_params
-    params.require(:comment).permit(:user_id, :body, :rating)
-  end
 
 end

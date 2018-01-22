@@ -19,6 +19,7 @@ end
   get 'simple_pages/index'
   post 'simple_pages/thank_you'
    get 'users/index'
+   post 'payments/create'
 
   mount ActionCable.server => '/cable'
 
